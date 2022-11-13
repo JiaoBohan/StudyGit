@@ -1,4 +1,6 @@
 Just read the file.
+
+git config
 git add filename
 git commit -m "message"
 git status
