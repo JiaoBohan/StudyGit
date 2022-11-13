@@ -13,4 +13,4 @@ git rm filename         //  删除该文件，之后提交即可将其从版本�
 git remote add <origin> git@server-name:path/repo-name.git    // 关联远程库     origin 为给远程库指定的名字
 git remote -v           // 查看远程库的信息
 git remote rm <name>    // 删除远程库（解除本地库与远程库的绑定）
-git push <origin> master    // 向远程库推送最新修改
+git push <-u> <origin> master    // 向远程库推送最新修改    第一次提交需加 -u
