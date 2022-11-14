@@ -31,3 +31,4 @@ git stash apply // 恢复工作区
 git stash drop  // 删除 stash 中的内容
 git cherry-pick <seq>   // 复制序号为 seq 的提交到当前分支
 git pull (origin) (origin-branch)(:local-branch)  // 拉取远程分支并于本地分支合并
+多人协作    git push 推送修改 --> 推送失败，尝试 git pull 合并，并解决冲突 --> 在本地提交 --> 重新推送
