@@ -23,8 +23,17 @@ git branch          // 查看当前分支
 git branch -d <dev> // 删除 dev 分支
 git merge (--no-ff -m "<message>") <dev>     // 合并 dev 分支到当前分支
 // --no-ff 强制禁用 Fast forward 模式，这样在 merge 时会生成一个新的 commit，这样从分支历史上就可以看出分支信息。
+<<<<<<< Updated upstream
 git stash
 git stash list
 git stash pop
 git stash apply
 git stass drop
+=======
+git stash       // 储藏当前工作区（已 add 但未 commit）
+git stash list  // 显示所储存的工作区
+git stash pop   // 恢复工作区并将 stash 内容删除
+git stash apply // 恢复工作区
+git stass drop  //删除 stash 中的内容
+git cherry-pick <seq>
+>>>>>>> Stashed changes
