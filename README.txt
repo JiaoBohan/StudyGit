@@ -16,3 +16,9 @@ git remote rm <name>    // 删除远程库（解除本地库与远程库的绑�
 git push <-u> <origin> master    // 向远程库推送最新修改    第一次提交需加 -u
 git clone https://github.com/project/repo.git   // 使用 HTTPS 协议克隆 每次推送均需输入口令
 git clone git@github.com:project/repo.git   // 使用 SSH 协议克隆
+git checkout -b <dev>   // 创建并切换到分支 dev
+git branch <dev>    // 创建分支 dev
+git checkout <dev>  // 切换到分支 dev
+git branch          // 查看当前分支
+git merge <dev>     // 合并 dev 分支到当前分支
+git branch -d <dev> // 删除 dev 分支
