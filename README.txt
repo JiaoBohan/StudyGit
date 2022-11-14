@@ -34,3 +34,7 @@ git cherry-pick <seq>   // 复制序号为 seq 的提交到当前分支
 git pull (origin) (origin-branch)(:local-branch)  // 拉取远程分支并于本地分支合并
 多人协作    git push 推送修改 --> 推送失败，尝试 git pull 合并，并解决冲突 --> 在本地提交 --> 重新推送
 git rebase  // 将本地未push的分叉提交历史整理成直线
+git tag <name> (seq) // 为所在分支创建名为 <name> 的标签 标签默认与最新的 commit 绑定，对应此 commit 的 seq
+git tag -a <name> -m "<message>" (seq)  // 创建带有说明的标签
+git tag     // 显示所有标签
+git show <tag-name>     // 显示所选标签的详细信息
