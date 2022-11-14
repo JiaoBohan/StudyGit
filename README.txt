@@ -38,3 +38,6 @@ git tag <name> (seq) // 为所在分支创建名为 <name> 的标签 标签默�
 git tag -a <name> -m "<message>" (seq)  // 创建带有说明的标签
 git tag     // 显示所有标签
 git show <tag-name>     // 显示所选标签的详细信息
+git config (--global) alias.<name> <commandName>    // 使用 name 来表示 commandName
+// 若 commandName 中有空格则需将 commandName 写在引号内
+// 配置文件位于 .git.config 中  别名在[alias]后面，要删除别名，直接把对应的行删掉即可   全局配置文件位于用户主目录下的 .gitconfig
