@@ -5,6 +5,7 @@ git add filename
 git commit -m "message"
 git status
 git log (--graph)(--pretty=oneline)     // graph 显示分支图     pretty=online 将每个信息显示在一行中
+// git log --graph --pretty=oneline --abbrev-commit
 git reflog
 git reset filename          // 将该文件从暂存区取出 取消 add
 git reset --hard <seq(HEAD)>    // 用 seq = HEAD 时，表示最新的版本，若无 seq，则回到上一次 commit 时的状态
