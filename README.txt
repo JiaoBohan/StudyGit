@@ -13,13 +13,14 @@ git rm filename         //  删除该文件，之后提交即可将其从版本�
 git remote add <origin> git@server-name:path/repo-name.git    // 关联远程库     origin 为给远程库指定的名字
 git remote -v           // 查看远程库的信息
 git remote rm <name>    // 删除远程库（解除本地库与远程库的绑定）
-git push <-u> <origin> master    // 向远程库推送最新修改    第一次提交需加 -u
+git push <-u> <origin> <master>    // 向远程库推送最新修改  origin 为远程仓库名称，master 为本地分支    第一次提交需加 -u
 git clone https://github.com/project/repo.git   // 使用 HTTPS 协议克隆 每次推送均需输入口令
 git clone git@github.com:project/repo.git   // 使用 SSH 协议克隆
-git checkout -b <dev>   // 创建并切换到分支 dev     git switch -c <dev>
+git checkout -b <dev> (<origin/dev>)   // 创建并切换到分支 dev，两个参数为拉取远程分支并创建本地分支     git switch -c <dev>
 git branch <dev>    // 创建分支 dev
 git checkout <dev>  // 切换到已有分支 dev       git switch <dev>
-git branch          // 查看当前分支
+git branch (-r)         // 查看当前分支 -r 查看远程分支
+git branch --set-upstream-to=origin/<branch> <local-branch>     // 指定本地分支与远程分支的链接
 git branch -d <dev> // 删除 dev 分支
 git merge (--no-ff -m "<message>") <dev>     // 合并 dev 分支到当前分支
 // --no-ff 强制禁用 Fast forward 模式，这样在 merge 时会生成一个新的 commit，这样从分支历史上就可以看出分支信息。
@@ -29,3 +30,4 @@ git stash pop   // 恢复工作区并将 stash 内容删除
 git stash apply // 恢复工作区
 git stash drop  // 删除 stash 中的内容
 git cherry-pick <seq>   // 复制序号为 seq 的提交到当前分支
+git pull (origin) (origin-branch)(:local-branch)  // 拉取远程分支并于本地分支合并
