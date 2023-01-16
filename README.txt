@@ -1,7 +1,7 @@
 Just read the file.
 
 git config
-git add filename
+git add filename    // 将文件添加到暂存区
 git commit -m "message"
 git status
 git log (--graph)(--pretty=oneline)     // graph 显示分支图     pretty=online 将每个信息显示在一行中
