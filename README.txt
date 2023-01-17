@@ -15,6 +15,7 @@ git remote add <origin> git@server-name:path/repo-name.git    // 关联远程库
 git remote -v           // 查看远程库的信息
 git remote rm <name>    // 删除远程库（解除本地库与远程库的绑定）
 git push <-u> <origin> <master>    // 向远程库推送最新修改  origin 为远程仓库名称，master 为本地分支    第一次提交需加 -u
+git push <远程主机名> <本地分支名>:<远程分支名> 如果本地分支名与远程分支名相同，则可以省略冒号：git push <远程主机名> <本地分支名>
 git clone https://github.com/project/repo.git   // 使用 HTTPS 协议克隆 每次推送均需输入口令
 git clone git@github.com:project/repo.git   // 使用 SSH 协议克隆
 git checkout -b <dev> (<origin/dev>)   // 创建并切换到分支 dev，两个参数为拉取远程分支并创建本地分支     git switch -c <dev>
