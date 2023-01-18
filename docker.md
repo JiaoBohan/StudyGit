@@ -33,6 +33,7 @@
 > - -i	保持容器运行，通常与 ``-t``同时使用
 > - -t	为容器重新分配一个伪输入终端
 > - -d 	以后台模式运行容器，退出后不会关闭。需使用 ``docker exec {name}``来进入容器
+> - -p 宿主机端口:容器端口	进行端口映射
 
 进入容器 ``docker exec {name}``
 
@@ -42,10 +43,22 @@
 
 删除容器 ``docker rm {name}``
 
-查看容器信息 ``docker inspect {name}`` 
+查看容器信息 ``docker inspect {name}``
 
 # 数据卷
 
-配置数据卷 
+配置数据卷
 
 ``docker run ... -v 宿主机目录(文件):容器内目录(文件) 镜像名:镜像版本``
+
+# Dockerfile文件制作镜像
+
+示例
+
+```
+FROM centos:7			#定义父镜像
+MAINTAINER jbh<123@qq.com>	#定义作者信息
+RUN yum install -y vim		#执行安装 vim 命令
+WORKDIR /usr			#定义默认的工作目录
+CMD /bin/bash			#定义容器启动执行的命令
+```
